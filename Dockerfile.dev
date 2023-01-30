@@ -1,0 +1,7 @@
+FROM synchrodb-dev-base-image as base
+
+WORKDIR /go/synchrodb/services
+
+COPY . .
+
+RUN go mod download
