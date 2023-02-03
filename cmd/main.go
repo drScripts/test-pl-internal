@@ -19,6 +19,7 @@ import (
 func apiMiddleware(fc echo.HandlerFunc) echo.HandlerFunc {
 	return func(context echo.Context) error {
 		context.Request().Header.Set("gateway", "true")
+		fmt.Println("HAIII TEST")
 		return fc(context)
 
 	}
